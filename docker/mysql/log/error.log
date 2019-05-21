@@ -1,0 +1,29 @@
+mbind: Operation not permitted
+2019-05-21T15:13:48.195419Z 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+2019-05-21T15:13:48.195505Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.15) starting as process 1
+2019-05-21T15:13:48.197347Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-05-21T15:13:48.197356Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2019-05-21T15:13:57.007620Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-05-21T15:13:57.012778Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2019-05-21T15:13:57.014479Z 0 [ERROR] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-001146 - Table 'mysql.component' doesn't exist
+2019-05-21T15:13:57.014504Z 0 [Warning] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-003543 - The mysql.component table is missing or has an incorrect definition.
+2019-05-21T15:13:57.020411Z 0 [Warning] [MY-010929] [Server] Storage engine 'MyISAM' does not support system tables. [mysql.user].
+2019-05-21T15:13:57.020425Z 0 [Warning] [MY-010929] [Server] Storage engine 'MyISAM' does not support system tables. [mysql.db].
+2019-05-21T15:13:57.020438Z 0 [Warning] [MY-010929] [Server] Storage engine 'MyISAM' does not support system tables. [mysql.tables_priv].
+2019-05-21T15:13:57.020450Z 0 [Warning] [MY-010929] [Server] Storage engine 'MyISAM' does not support system tables. [mysql.columns_priv].
+2019-05-21T15:13:57.020462Z 0 [Warning] [MY-010929] [Server] Storage engine 'MyISAM' does not support system tables. [mysql.procs_priv].
+2019-05-21T15:13:57.020474Z 0 [Warning] [MY-010929] [Server] Storage engine 'MyISAM' does not support system tables. [mysql.proxies_priv].
+2019-05-21T15:13:57.020995Z 0 [ERROR] [MY-013143] [Server] Column count of mysql.user is wrong. Expected 51, found 45. The table is probably corrupted
+2019-05-21T15:13:57.021034Z 0 [Warning] [MY-010966] [Server] ACL table mysql.role_edges missing. Some operations may fail.
+2019-05-21T15:13:57.021046Z 0 [Warning] [MY-010966] [Server] ACL table mysql.default_roles missing. Some operations may fail.
+2019-05-21T15:13:57.021058Z 0 [Warning] [MY-010966] [Server] ACL table mysql.global_grants missing. Some operations may fail.
+2019-05-21T15:13:57.021070Z 0 [Warning] [MY-010966] [Server] ACL table mysql.password_history missing. Some operations may fail.
+2019-05-21T15:13:57.021580Z 0 [ERROR] [MY-010965] [Server] Missing system table mysql.global_grants; please run mysql_upgrade to create it.
+2019-05-21T15:13:57.026431Z 0 [Warning] [MY-010727] [Server] System table 'func' is expected to be transactional.
+2019-05-21T15:13:57.028919Z 0 [Warning] [MY-010405] [Repl] Info table is not ready to be used. Table 'mysql.slave_master_info' cannot be opened.
+2019-05-21T15:13:57.028957Z 0 [ERROR] [MY-010422] [Repl] Error in checking mysql.slave_master_info repository info type of TABLE.
+2019-05-21T15:13:57.028975Z 0 [ERROR] [MY-010415] [Repl] Error creating master info: Error checking repositories.
+2019-05-21T15:13:57.028989Z 0 [ERROR] [MY-010426] [Repl] Slave: Failed to initialize the master info structure for channel ''; its record may still be present in 'mysql.slave_master_info' table, consider deleting it.
+2019-05-21T15:13:57.029002Z 0 [ERROR] [MY-010529] [Repl] Failed to create or recover replication info repositories.
+2019-05-21T15:13:57.033782Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.15'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2019-05-21T15:13:57.190892Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock' bind-address: '::' port: 33060

@@ -1,0 +1,48 @@
+version: '3'
+services:
+  mysql:
+    build:
+      context: docker/mysql
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=junkqueue
+      - MYSQL_PASSWORD=secret
+    restart: always
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/log:/var/log/mysql
+    networks:
+      - internal
+  php-fpm:
+    build:
+      context: docker/php-fpm
+    volumes:
+      - ./:/var/www
+    environment:
+      XDEBUG_CONFIG: "remote_host=192.168.220.1 remote_enable=1"
+      PHP_IDE_CONFIG: "serverName=Docker"
+    depends_on:
+      - mysql
+    networks:
+      - internal
+  nginx:
+    build:
+      context: docker/nginx
+    volumes:
+      - ./nginx/logs:/var/log/nginx:cached
+      - ./:/var/www
+    ports:
+      - "8080:80"
+    depends_on:
+      - php-fpm
+    networks:
+      - internal
+networks:
+  internal:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.220.0/28
