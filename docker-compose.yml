@@ -31,7 +31,7 @@ services:
     build:
       context: docker/nginx
     volumes:
-      - ./nginx/logs:/var/log/nginx:cached
+      - ./docker/nginx/logs:/var/log/nginx:cached
       - ./:/var/www
     ports:
       - "8080:80"
